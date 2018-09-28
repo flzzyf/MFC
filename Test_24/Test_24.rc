@@ -271,6 +271,8 @@ END
 STRINGTABLE PRELOAD DISCARDABLE 
 BEGIN
     IDR_MAINFRAME           "Test_24\n\nTest_2\n\n\nTest24.Document\nTest_2 Document"
+    ID_INDICATOR_X          "x"
+    ID_INDICATOR_Y          "y"
 END
 
 STRINGTABLE PRELOAD DISCARDABLE 

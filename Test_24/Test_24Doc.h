@@ -5,6 +5,7 @@
 #if !defined(AFX_TEST_24DOC_H__0B1DC51C_78C6_427D_99CD_6346DFAF1C94__INCLUDED_)
 #define AFX_TEST_24DOC_H__0B1DC51C_78C6_427D_99CD_6346DFAF1C94__INCLUDED_
 
+#include "P2.h"	// Added by ClassView
 #if _MSC_VER > 1000
 #pragma once
 #endif // _MSC_VER > 1000

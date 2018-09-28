@@ -5,7 +5,9 @@
 #define IDD_ABOUTBOX                    100
 #define IDR_MAINFRAME                   128
 #define IDR_TEST_2TYPE                  129
+#define ID_INDICATOR_X                  129
 #define IDD_DIALOG1                     130
+#define ID_INDICATOR_Y                  130
 #define IDC_EDIT1                       1000
 #define IDC_EDIT2                       1001
 #define IDW_Diamond                     32771

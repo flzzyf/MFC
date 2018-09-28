@@ -33,6 +33,9 @@ BEGIN_MESSAGE_MAP(CTest_24View, CView)
 	//{{AFX_MSG_MAP(CTest_24View)
 	ON_COMMAND(IDW_Line, OnDrawLine)
 	ON_COMMAND(IDW_Diamond, OnDrawDiamond)
+	ON_WM_LBUTTONDOWN()
+	ON_WM_LBUTTONUP()
+	ON_WM_MOUSEMOVE()
 	//}}AFX_MSG_MAP
 	// Standard printing commands
 	ON_COMMAND(ID_FILE_PRINT, CView::OnFilePrint)
@@ -198,4 +201,56 @@ void CTest_24View::DrawDiamond()
 	pDC->SelectObject(pOldPen);
 	NewPen.DeleteObject();
 	ReleaseDC(pDC);
+}
+
+void CTest_24View::OnLButtonDown(UINT nFlags, CPoint point) 
+{
+	// TODO: Add your message handler code here and/or call default
+	
+	CView::OnLButtonDown(nFlags, point);
+
+	p0.x = point.x;
+	p0.y = point.y;
+}
+
+void CTest_24View::OnLButtonUp(UINT nFlags, CPoint point) 
+{
+	// TODO: Add your message handler code here and/or call default
+	
+	CView::OnLButtonUp(nFlags, point);
+
+	p1.x = point.x;
+	p1.y = point.y;
+
+	CLine *line = new CLine;
+	CDC *pDC = GetDC();
+	line->MoveTo(pDC, p0);
+	line->LineTo(pDC, p1);
+	delete line;
+	ReleaseDC(pDC);
+	
+}
+
+void CTest_24View::OnMouseMove(UINT nFlags, CPoint point) 
+{
+	// TODO: Add your message handler code here and/or call default
+	
+	CView::OnMouseMove(nFlags, point);
+
+	CString strx, stry;
+	CMainFrame *pFrame = (CMainFrame *)AfxGetMainWnd();
+	CStatusBar *pstatus = &pFrame->m_wndStatusBar;
+	if(pstatus)
+	{
+		strx.Format("x=%d", point.x);
+		stry.Format("y=%d", point.y);
+		CClientDC dc(this);
+		CSize sizex = dc.GetTextExtent(strx);
+		CSize sizey = dc.GetTextExtent(stry);
+
+		pstatus->SetPaneInfo(1, ID_INDICATOR_X, SBPS_NORMAL, sizex.cx);
+		pstatus->SetPaneText(1, strx);
+		pstatus->SetPaneInfo(2, ID_INDICATOR_Y, SBPS_NORMAL, sizey.cx);
+		pstatus->SetPaneText(2, stry);
+	}
 }

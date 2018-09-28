@@ -6,13 +6,13 @@
 --------------------Configuration: Test_24 - Win32 Debug--------------------
 </h3>
 <h3>Command Lines</h3>
-Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP1BCE.tmp" with contents
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP8BBB.tmp" with contents
 [
 /nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/Test_24.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
-"F:\ZYF PROJECT\MFC\MFC\Test_24\Test_24View.cpp"
+"F:\ZYF Project\MFC\MFC\Test_24\Line.cpp"
 ]
-Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP1BCE.tmp" 
-Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP1BCF.tmp" with contents
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP8BBB.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP8BBC.tmp" with contents
 [
 /nologo /subsystem:windows /incremental:yes /pdb:"Debug/Test_24.pdb" /debug /machine:I386 /out:"Debug/Test_24.exe" /pdbtype:sept 
 ".\Debug\InputDlg.obj"
@@ -23,11 +23,13 @@ Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP1BCF.tmp" with 
 ".\Debug\Test_24Doc.obj"
 ".\Debug\Test_24View.obj"
 ".\Debug\Test_24.res"
+".\Debug\RGB.obj"
+".\Debug\Line.obj"
 ]
-Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP1BCF.tmp"
+Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP8BBC.tmp"
 <h3>Output Window</h3>
 Compiling...
-Test_24View.cpp
+Line.cpp
 Linking...
 
 

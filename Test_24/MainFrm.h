@@ -36,8 +36,10 @@ public:
 	virtual void Dump(CDumpContext& dc) const;
 #endif
 
+CStatusBar  m_wndStatusBar;
+
 protected:  // control bar embedded members
-	CStatusBar  m_wndStatusBar;
+	
 	CToolBar    m_wndToolBar;
 
 // Generated message map functions
